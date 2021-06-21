@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        body{
+            color: #fff;
+            text-align: center;
+        }
+        #content{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-auto-rows: 200px;
+            grid-gap: 3px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        #content div{
+            background: #3bbced;
+            padding: 30px;
+        }
+        #content div:nth-child(even)
+        {
+            background: #777;
+        }
+        .container div{
+            overflow: scroll;
+        }
+        ::-webkit-scrollbar {
+    width: 0px;
+}
+        .yedi{
+            grid-column: 1/3;
+        }
+        #content div:first-child{
+            grid-row: 1/4;
+        }
+        .dokuz{
+            grid-row: 1/1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="content">
+        <div>1</div>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, id dicta. Voluptatem aliquam rerum unde incidunt voluptate ea non nostrum expedita dolore quas facilis veniam ullam, at assumenda corporis recusandae?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, aut, dolores voluptas quos deserunt dignissimos sapiente ipsam, natus modi eligendi expedita. Voluptatum, consectetur fuga? Cupiditate amet eius voluptates totam eaque?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ducimus, sunt voluptatem perspiciatis dolore, quaerat esse ipsa quibusdam dolorem eos eius. Repudiandae possimus ad ab quaerat totam eveniet eum tempora?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad cupiditate libero quod saepe dicta corporis amet numquam aliquam hic, modi culpa, sit dolorem. Rem maxime amet unde. Odio, ex maiores.
+        </div>
+        <div>3</div>
+        <div>4</div>
+        <div class="beş">5</div>
+        <div>6</div>
+        <div class="yedi">7</div>
+        <div class="sekiz">8</div>
+        <div class="dokuz">9</div>
+
+        <div class="test">
+
+        </div>
+    </div>
+    
+
+    <script>
+        
+        class sinif{
+            
+             yaz() {
+                console.log(this)
+            }
+            sil=()=>{
+                console.log(this)
+            }
+        }
+
+        const yedi=document.querySelector(".yedi")
+
+        yedi.addEventListener("click",function(){
+            
+            (function(){
+                console.log(this)
+            })()
+        })
+        let item=yedi.parentNode
+       let body=item.parentNode
+
+       const test= document.querySelector(".test")
+        test.style.background="red"
+        test.style.height="20px"
+        console.log(test.parentNode)
+    </script>
+</body>
+</html>
