@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    
 </head>
 <body>
     <header class="header" id="header">
@@ -805,9 +806,83 @@
 
 
             <!-- Portfolio -->
-         
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section__title">
+                    Porfolio
+                </h2>
+                <span class="section__subtitle">
+                    Most recent work
+                </span>
 
+                <div class="portfolio__container container swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="img/portfolio1.jpg" class="portfolio__img" alt="">
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">
+                                    Modern Website
+                                </h3>
+                                <p class="portfolio__description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, et.
+                                    Lorem ipsum dolor sit amet.
+                                </p>
+                                <a href="#" class="button button--flex button--small portfolio__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Porfolio 2 -->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="img/portfolio2.jpg" class="portfolio__img" alt="">
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">
+                                    Brand Design
+                                </h3>
+                                <p class="portfolio__description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, et.
+                                    Lorem ipsum dolor sit amet.
+                                </p>
+                                <a href="#" class="button button--flex button--small portfolio__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="img/portfolio3.jpg" class="portfolio__img" alt="">
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">
+                                    Online Store
+                                </h3>
+                                <p class="portfolio__description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, et.
+                                    Lorem ipsum dolor sit amet.
+                                </p>
+                                <a href="#" class="button button--flex button--small portfolio__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+              
+            </section>
+            <i class="uil uil-message button__icon"></i>
     </main>
+   
+    <script src="swiper-bundle.min.js"></script>
     <script src="index.js"></script>
+    
 </body>
 </html>
