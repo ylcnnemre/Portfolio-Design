@@ -161,3 +161,78 @@ modalCloses.forEach((modalClose)=>{
     },
   
   });
+
+
+  var swiperPortfolio = new Swiper(".swiper-container", {
+    cssMode: true,
+    loop:true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable:true
+    },
+  
+  });
+
+
+  var swiperTestimonial = new Swiper(".testimonial__container", {
+    cssMode: true,
+    loop:true,
+    spaceBetween:48,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable:true,
+      dynamicBullets:true
+    },
+    breakpoints:{
+        568:{
+            slidesPerView:2
+        }
+    }
+  });
+
+
+
+  const NavLink=document.querySelectorAll(".nav__item")
+
+  navLink.forEach((el)=>{
+      el.addEventListener("click",function(){
+          
+          navLink.forEach((el)=>{
+               el.classList.remove("active-link")
+          })
+          el.classList.add("active-link")
+          console.log(el.classList["nav__link"])
+      })
+  })
+
+
+  const uilmoon=document.querySelector(".uil-moon")
+const body=document.querySelector("body")
+  uilmoon.addEventListener("click",()=>{
+    body.classList.toggle("bodyColor")
+    uilmoon.classList.toggle("white")
+  })
+
+
+  function scrollUp()
+  {
+      const scrollUp=document.getElementById("scrollup")
+
+      if(this.scrollY>=560)
+      {
+          scrollUp.classList.add("show-scroll")
+      }
+      else{
+          scrollUp.classList.remove("show-scroll")
+      }
+
+  }
+  window.addEventListener("scroll",scrollUp)
